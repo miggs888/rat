@@ -1,0 +1,247 @@
+[
+  {
+    "YEAR": 2018,
+    "Month": "Feb",
+    "MonthTotal": 24.34,
+    "OrderNo": 1,
+    "AvePrice": 24.34
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Mar",
+    "MonthTotal": 53.13,
+    "OrderNo": 2,
+    "AvePrice": 26.565
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Apr",
+    "MonthTotal": 104.08,
+    "OrderNo": 4,
+    "AvePrice": 26.02
+  },
+  {
+    "YEAR": 2018,
+    "Month": "May",
+    "MonthTotal": 231.74,
+    "OrderNo": 9,
+    "AvePrice": 25.74888889
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Jun",
+    "MonthTotal": 982,
+    "OrderNo": 12,
+    "AvePrice": 81.83333333
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Jul",
+    "MonthTotal": 117.54,
+    "OrderNo": 5,
+    "AvePrice": 23.508
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Aug",
+    "MonthTotal": 29.4,
+    "OrderNo": 2,
+    "AvePrice": 14.7
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Sep",
+    "MonthTotal": 74.22,
+    "OrderNo": 3,
+    "AvePrice": 24.74
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Oct",
+    "MonthTotal": 34.23,
+    "OrderNo": 2,
+    "AvePrice": 17.115
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Nov",
+    "MonthTotal": 127.73,
+    "OrderNo": 5,
+    "AvePrice": 25.546
+  },
+  {
+    "YEAR": 2018,
+    "Month": "Dec",
+    "MonthTotal": 19.99,
+    "OrderNo": 1,
+    "AvePrice": 19.99
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Jan",
+    "MonthTotal": 1293.37,
+    "OrderNo": 5,
+    "AvePrice": 258.674
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Feb",
+    "MonthTotal": 102.48,
+    "OrderNo": 4,
+    "AvePrice": 25.62
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Mar",
+    "MonthTotal": 99.43,
+    "OrderNo": 4,
+    "AvePrice": 24.8575
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Apr",
+    "MonthTotal": 238.55,
+    "OrderNo": 4,
+    "AvePrice": 59.6375
+  },
+  {
+    "YEAR": 2019,
+    "Month": "May",
+    "MonthTotal": 188.58,
+    "OrderNo": 3,
+    "AvePrice": 62.86
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Jun",
+    "MonthTotal": 59.21,
+    "OrderNo": 2,
+    "AvePrice": 29.605
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Jul",
+    "MonthTotal": 430.47,
+    "OrderNo": 5,
+    "AvePrice": 86.094
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Aug",
+    "MonthTotal": 315.47,
+    "OrderNo": 8,
+    "AvePrice": 39.43375
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Sep",
+    "MonthTotal": 368.23,
+    "OrderNo": 6,
+    "AvePrice": 61.37166667
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Oct",
+    "MonthTotal": 30.4,
+    "OrderNo": 2,
+    "AvePrice": 15.2
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Nov",
+    "MonthTotal": 24.34,
+    "OrderNo": 1,
+    "AvePrice": 24.34
+  },
+  {
+    "YEAR": 2019,
+    "Month": "Dec",
+    "MonthTotal": 36.23,
+    "OrderNo": 2,
+    "AvePrice": 18.115
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Jan",
+    "MonthTotal": 50.13,
+    "OrderNo": 3,
+    "AvePrice": 16.71
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Feb",
+    "MonthTotal": 134.89,
+    "OrderNo": 3,
+    "AvePrice": 44.96333333
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Mar",
+    "MonthTotal": 253.01,
+    "OrderNo": 9,
+    "AvePrice": 28.11222222
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Apr",
+    "MonthTotal": 61.06,
+    "OrderNo": 4,
+    "AvePrice": 15.265
+  },
+  {
+    "YEAR": 2020,
+    "Month": "May",
+    "MonthTotal": 188.13,
+    "OrderNo": 6,
+    "AvePrice": 31.355
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Jun",
+    "MonthTotal": 230.95,
+    "OrderNo": 7,
+    "AvePrice": 32.99285714
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Jul",
+    "MonthTotal": 571.77,
+    "OrderNo": 7,
+    "AvePrice": 81.68142857
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Aug",
+    "MonthTotal": 230.16,
+    "OrderNo": 5,
+    "AvePrice": 46.032
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Sep",
+    "MonthTotal": 351.03,
+    "OrderNo": 10,
+    "AvePrice": 35.103
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Oct",
+    "MonthTotal": 262.14,
+    "OrderNo": 9,
+    "AvePrice": 29.12666667
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Nov",
+    "MonthTotal": 269.72,
+    "OrderNo": 6,
+    "AvePrice": 44.95333333
+  },
+  {
+    "YEAR": 2020,
+    "Month": "Dec",
+    "MonthTotal": 325.83,
+    "OrderNo": 7,
+    "AvePrice": 46.54714286
+  }
+]
