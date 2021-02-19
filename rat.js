@@ -1,5 +1,7 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
+  color('#fd73ac');
+
 }
 
 // had trouble getting my JSON file to link, so in the mean time I am adding the object here
@@ -205,14 +207,13 @@ var index = 0;
 var rat = deliveries.shipments[index];
 
 
-var yr = document.getElementById('yr');
-var mo = document.getElementById('mo');
-var cost = document.getElementById('cost');
-var orders = document.getElementById('orders');
-var avecost = document.getElementById('avecost');
-
-var previous = document.getElementById('previous');
-var next = document.getElementById('next');
+var yr = document.getElementById('yr');// order year
+var mo = document.getElementById('mo'); // order month
+var cost = document.getElementById('cost');// month total cost for orders
+var orders = document.getElementById('orders');// number of orders
+var avecost = document.getElementById('avecost');// average cost of orders (orders / number of orders)
+var previous = document.getElementById('previous');// prevoious button
+var next = document.getElementById('next');// next button
 
 displayItem(rat);
 
@@ -231,14 +232,68 @@ function displayItem(rat) {
     previous.disabled = index <= 0;
     next.disabled = index >= deliveries.shipments.length -1;
 }
+
+var offset = 100;
+var strum = 1.5;
+
 function draw() {
-  background(220);
+  background('#fd73ac');
   noStroke();
-  ellipseMode(CENTER);
+  ellipseMode(RADIUS);
+  stroke('black')
   if (deliveries.shipments[index].pandemic === false) {
-    fill('white');
+    fill('grey');
   } else {
     fill('orange');
   };
-  ellipse(width / 2, height / 2, deliveries.shipments[index].orders*30);
+
+  //setting variable of circle width based on number of orders
+  let orders =  deliveries.shipments[index].orders*40;
+
+  //drawing rat body with variable from array
+  ellipse(width / 2, (height / 2) + 30, orders);
+
+  // drawing rat head
+  fill('grey');
+  stroke('black');
+  let hx = constrain(mouseX, (width / 2) - (orders / 2) - 2, (width / 2) + (orders / 2) + 2);
+  let hy = constrain(mouseY, (height / 2) - (orders / 2) - 5, (height / 2) + (orders / 2) + 5);
+  ellipse(hx, hy, deliveries.shipments[index].orders*20);
+  // drawing rat ears
+  ellipse(hx - 40, hy - 40, 30); // outside left
+  ellipse(hx + 40, hy - 40, 30); // outside right
+  strokeWeight(3.5);
+  fill('pink');
+  ellipse(hx - 35, hy - 32, 20); // inside left
+  ellipse(hx + 35, hy - 32, 20); // inside right
+
+  // drawing rat eyes
+  fill('black');
+  ellipse(hx - 12, hy, 8); // inside left
+  ellipse(hx + 12, hy, 8); // inside right
+  //
+  fill('white');
+  noStroke();
+  ellipse(hx - 14, hy - 3, 1); // inside left
+  ellipse(hx + 14, hy - 3, 1); // inside right
+  // 
+  ellipse(hx - 12, hy + 5, 4); // inside left
+  ellipse(hx + 12, hy + 5, 4); // inside right
+
+  //drawing rat feet
+
+
+  // drawing tail of rat
+  noFill();
+  stroke('pink');
+  strokeWeight(3);
+    beginShape();
+        curveVertex(width / 2, (height / 2 + 30) - orders);
+        curveVertex(width / 2, (height / 2 + 30) - orders);
+        curveVertex(random ((width / 2) - 80, (width / 2) + 10), random(60, 80));
+        curveVertex(width / 2,20);
+        curveVertex(width / 2,20);
+    endShape();
+    noStroke();
+
 }
