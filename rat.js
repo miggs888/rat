@@ -1,9 +1,3 @@
-function setup() {
-  createCanvas(800, 800);
-  color('#fd73ac');
-
-}
-
 // had trouble getting my JSON file to link, so in the mean time I am adding the object here
 var deliveries = {
     "shipments": [
@@ -205,7 +199,11 @@ var deliveries = {
 //creating index for array
 var index = 0;
 var rat = deliveries.shipments[index];
-
+let ratheadimg;
+let ratbodyimg;
+let cheeseimg;
+let cheeses =[];
+let sel;
 
 var yr = document.getElementById('yr');// order year
 var mo = document.getElementById('mo'); // order month
@@ -214,6 +212,34 @@ var orders = document.getElementById('orders');// number of orders
 var avecost = document.getElementById('avecost');// average cost of orders (orders / number of orders)
 var previous = document.getElementById('previous');// prevoious button
 var next = document.getElementById('next');// next button
+
+function preload() {
+  cheeseimg = loadImage('images/cheese.png', console.log('cheese'));
+  ratheadimg = loadImage('images/ratheadpng.png', console.log('head'));
+  ratbodyimg = loadImage('images/ratbody.png', console.log('body'));
+  fontRegular = loadFont('images/dinbold.ttf');
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  color('#fd73ac');
+
+  //creating dropdown month display
+  sel = createSelect();
+  sel.position(width / 5 , 300);
+  sel.option('January');
+  sel.option('February');
+  sel.option('March');
+  sel.option('April');
+  sel.option('May');
+  sel.option('June');
+  sel.option('July');
+  sel.option('August');
+  sel.option('September');
+  sel.option('October');
+  sel.option('November');
+  sel.option('December');
+}
 
 displayItem(rat);
 
@@ -233,67 +259,67 @@ function displayItem(rat) {
     next.disabled = index >= deliveries.shipments.length -1;
 }
 
-var offset = 100;
-var strum = 1.5;
-
 function draw() {
+  imageMode(CENTER);
   background('#fd73ac');
-  noStroke();
-  ellipseMode(RADIUS);
-  stroke('black')
-  if (deliveries.shipments[index].pandemic === false) {
-    fill('grey');
-  } else {
-    fill('orange');
-  };
 
+    // adding cheese to empty cheese display array
+    for (let i = 0; i < deliveries.shipments[index].orders; i++) {
+      let x = (width / 3) + 90 * i;
+      cheeses[i] = new Cheese(x, 80, 120, 80);
+  }
+    //drawing pieces of cheese depending on number of orders
+    for (let i = 0; i < deliveries.shipments[index].orders; i++) {
+      // cheeses[i].move();
+      cheeses[i].show()
+    }
+ 
   //setting variable of circle width based on number of orders
-  let orders =  deliveries.shipments[index].orders*40;
+  let orders =  deliveries.shipments[index].orders*30;
 
+   // DRAW 2019 RAT
   //drawing rat body with variable from array
-  ellipse(width / 2, (height / 2) + 30, orders);
-
+  image(ratbodyimg, width / 4, height / 3, orders*5, orders*4);
   // drawing rat head
-  fill('grey');
-  stroke('black');
-  let hx = constrain(mouseX, (width / 2) - (orders / 2) - 2, (width / 2) + (orders / 2) + 2);
-  let hy = constrain(mouseY, (height / 2) - (orders / 2) - 5, (height / 2) + (orders / 2) + 5);
-  ellipse(hx, hy, deliveries.shipments[index].orders*20);
-  // drawing rat ears
-  ellipse(hx - 40, hy - 40, 30); // outside left
-  ellipse(hx + 40, hy - 40, 30); // outside right
-  strokeWeight(3.5);
-  fill('pink');
-  ellipse(hx - 35, hy - 32, 20); // inside left
-  ellipse(hx + 35, hy - 32, 20); // inside right
+  let hxl = constrain(mouseX, (width / 4) - (orders / 2) - 2, (width / 4) + (orders / 2) + 2);
+  let hyl = constrain(mouseY, (height / 3.5) - (orders / 2) - 5, (height / 4) + (orders / 2) + 5);
+  image(ratheadimg, hxl, hyl, 500, 425);
+  textFont(fontRegular);
+  textSize(100);
+  fill('#299481');
+  text('2019', width / 4 - 30, 250);
 
-  // drawing rat eyes
-  fill('black');
-  ellipse(hx - 12, hy, 8); // inside left
-  ellipse(hx + 12, hy, 8); // inside right
-  //
-  fill('white');
-  noStroke();
-  ellipse(hx - 14, hy - 3, 1); // inside left
-  ellipse(hx + 14, hy - 3, 1); // inside right
-  // 
-  ellipse(hx - 12, hy + 5, 4); // inside left
-  ellipse(hx + 12, hy + 5, 4); // inside right
-
-  //drawing rat feet
-
-
-  // drawing tail of rat
-  noFill();
-  stroke('pink');
-  strokeWeight(3);
-    beginShape();
-        curveVertex(width / 2, (height / 2 + 30) - orders);
-        curveVertex(width / 2, (height / 2 + 30) - orders);
-        curveVertex(random ((width / 2) - 80, (width / 2) + 10), random(60, 80));
-        curveVertex(width / 2,20);
-        curveVertex(width / 2,20);
-    endShape();
-    noStroke();
+   // DRAW 2020 RAT
+  //drawing rat body with variable from array
+  image(ratbodyimg, (width / 4) * 3 - 30, height / 3, orders*5, orders*4);
+  // drawing rat head
+  let hxr = constrain(mouseX, (width / 4)*3 - (orders / 2) - 2, (width / 4)*3 + (orders / 2) + 2);
+  let hyr = constrain(mouseY, (height / 3.5) - (orders / 2) - 5, (height / 4) + (orders / 2) + 5);
+  image(ratheadimg, hxr, hyr, 500, 425);
+  text('2020', (width / 4)*3, 250);
 
 }
+
+function mySelectEvent() {
+  let item = sel.value();
+  text('It is a ' + item + '!', 50, 500);
+  console.log(sel.value);
+}
+// class parameters for drawing cheese
+class Cheese {
+  constructor(x, y, w, h) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+  }
+
+  move() {
+    this.x = this.x + random(-1, 1);
+    this.y = this.y + random(-1, 1);
+  }
+
+  show() {
+    image(cheeseimg, this.x, this.y, this.w, this.h);
+  }
+} 
