@@ -5,47 +5,68 @@ canvas {
     display: block;
     margin: 0 auto;
   }
-  
-[disabled] {
-      opacity: 0.5;
-  }
-
-h2 {
+.rats {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px;
+}
+h1 {
   font-family: corn-dog, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 800%;
+  font-size: 900%;
   letter-spacing: -9px;
-  line-height: 90px;
+  line-height: 100px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 80px;
+  width: 70%;
 }
 
-p, #yr, #mo, #orders {
-  font-family: itc-avant-garde-gothic-pro, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 120%;
-  padding: 18px;
-
+a {
+  font-family: corn-dog, sans-serif;
 }
-
-.details {
+.yeardisplay {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
+  font-family: hobeaux, sans-serif;
+  font-weight: 700;
+  height: 95px;
+  color: #f4b1cd;
+  font-size: 500%;
+  text-decoration: underline;
 }
-
+.rat {
+  max-width: 900px;
+}
+.container__buttons {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
 button {
   border: none;
   padding: 10px;
   margin: 9px;
-  background-color: #299481;
+  background-color: #d62477;
   color: white;
-  font-family: corn-dog, sans-serif;
-  font-weight: 400;
-  font-size: 200%;
+  font-family: hobeaux, sans-serif;
+font-weight: 700;
+  font-size: 150%;
   font-style: normal;
+  border-radius: 6px;
+}
+button:hover{
+  border: none;
+  padding: 10px;
+  margin: 9px;
+  background-color: #04ffff;
+  color: #d62477;
+  font-family: hobeaux, sans-serif;
+font-weight: 700;
+  font-size: 150%;
+  font-style: normal;
+  border-radius: 6px;
 }
 .container__buttons {
   display: flex;

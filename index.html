@@ -9,15 +9,24 @@
 </head>
 <body>
     <div class="container">
-        <h2> How Fat is the Pandemic Rat?</h2>
-        <div class="details">
-          <p>Year: <div id="yr"></div></p>
-          <p>Month: <div id="mo"></div></p>
-          <p>Number of orders per month:<div id="orders"></div></p>
-        </div>
+        <h1> How Fat is the Pandemic Rat?</h1>
         <div class="container__buttons">
-            <button id="previous">Previous</button>
-            <button id="next">Next</button>
+            <button id="Jan" onClick="drawJan()">January</button>
+            <button id="Feb" onClick="drawFeb()">February</button>
+            <button id="Mar" onClick="drawMar()">March</button>
+            <button id="Apr" onClick="drawApr()">April</button>
+            <button id="May" onClick="drawMay()">May</button>
+            <button id="Jun" onClick="drawJun()">June</button>
+            <button id="Jul" onClick="drawJul()">July</button>
+            <button id="Aug" onClick="drawAug()">August</button>
+            <button id="Sep" onClick="drawSep()">September</button>
+            <button id="Oct" onClick="drawOct()">October</button>
+            <button id="Nov" onClick="drawNov()">November</button>
+            <button id="Dec" onClick="drawDec()">December</button>
+        </div>
+        <div class="yeardisplay">
+            <p>2019</p>
+            <p>2020</p>
         </div>
     <script src="p5.js"></script>
     <script src="rat.js"></script>
