@@ -14,7 +14,7 @@ h1 {
   font-family: corn-dog, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1180%;
+  font-size: 800%;
   letter-spacing: -9px;
   line-height: 135px;
   margin: 0 auto;
@@ -29,7 +29,7 @@ h1 {
   font-weight: 400;
   height: 125px;
   color: #f4b1cd;
-  font-size: 165%;
+  font-size: 120%;
   padding-left: 400px;
   padding-right: 400px;
   padding-top: 50px;
@@ -42,7 +42,7 @@ h1 {
   font-weight: 700;
   height: 125px;
   color: #f4b1cd;
-  font-size: 600%;
+  font-size: 500%;
 }
 .rat {
   max-width: 900px;
