@@ -201,21 +201,16 @@ let cheeseimg;
 let cheeses =[];
 let sel;
 
-
-// var ratheadimg;
-// var ratbodyimg;
-
 function preload() {
   cheeseimg = loadImage('images/cheese.png');
   ratheadimg = loadImage('images/ratheadpng.png');
   ratbodyimg = loadImage('images/ratbody.png');
+  ratbodycontrolimg = loadImage('images/ratbodycontrol.png');
   fontRegular = loadFont('images/dinbold.ttf');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  // color('#fd73ac');
-
 }
 
 function draw() {
@@ -238,16 +233,16 @@ function drawJan(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
-  image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
+  image(ratheadimg, variableXposition, variableYposition - (variableYposition / 4), 300, 250);
 }
 
 function drawFeb(){
@@ -266,14 +261,14 @@ function drawFeb(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -294,14 +289,14 @@ function drawMar(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -322,14 +317,14 @@ function drawApr(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -350,14 +345,14 @@ function drawMay(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -378,14 +373,14 @@ function drawJun(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 5), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -406,14 +401,14 @@ function drawJul(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -434,14 +429,14 @@ function drawAug(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -462,14 +457,14 @@ function drawSep(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 3), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -490,14 +485,14 @@ function drawOct(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 5), controlYposition - (controlYposition / 4), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
@@ -518,9 +513,9 @@ function drawNov(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
+  image(ratheadimg, controlXposition + (controlXposition / 8), controlYposition - (controlYposition / 5), 300, 250);
   
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
@@ -546,32 +541,14 @@ function drawDec(){
   // 2019 RAT (CONTROL RAT)
   var ratnineteen = deliveries[index2019].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, controlXposition, controlYposition, ratnineteen*growth, ratnineteen*growth);
+  image(ratbodycontrolimg, controlXposition, controlYposition, ratnineteen*growth*1.4, ratnineteen*growth);
   // drawing rat head
-  image(ratheadimg, controlXposition, controlYposition - (controlYposition / 3), 300, 250);
-  
+  image(ratheadimg, controlXposition + (controlXposition / 5), controlYposition - (controlYposition / 4), 300, 250);
+
   // 2020 RAT (VARIABLE RAT)
   var rattwenty = deliveries[index2020].orders;
   //drawing rat body with variable from array
-  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth, rattwenty*growth);
+  image(ratbodyimg, variableXposition, variableYposition, rattwenty*growth*1.4, rattwenty*growth);
   // drawing rat head
   image(ratheadimg, variableXposition, variableYposition - (variableYposition / 3), 300, 250);
 }
-// class parameters for drawing cheese
-// class Cheese {
-//   constructor(x, y, w, h) {
-//     this.x = x;
-//     this.y = y;
-//     this.w = w;
-//     this.h = h;
-//   }
-
-//   move() {
-//     this.x = this.x + random(-1, 1);
-//     this.y = this.y + random(-1, 1);
-//   }
-
-//   show() {
-//     image(cheeseimg, this.x, this.y, this.w, this.h);
-//   }
-// } 
